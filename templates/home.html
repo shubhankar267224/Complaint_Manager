@@ -1,0 +1,55 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Complaint Management System</h1>
+    <a href="{{ url_for('complaint') }}">File a Complaint</a>
+    <a href="{{ url_for('admin') }}">Admin Login</a>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Complaint Manager System</h1>
+        <a href="{{ url_for('complaint') }}" class="btn">File a Complaint</a>
+        <a href="{{ url_for('admin') }}" class="btn">Admin Login</a>
+    </div>
+</body>
+</html>

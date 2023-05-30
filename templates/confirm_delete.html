@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Delete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .confirmation-message {
+            margin-bottom: 20px;
+        }
+        
+        .confirmation-actions {
+            margin-top: 20px;
+        }
+        
+        .confirmation-actions input[type="submit"] {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .confirmation-actions input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Confirm Delete</h1>
+    <div class="confirmation-message">
+        <p>Are you sure you want to delete complaint ID {{ complaint_id }}?</p>
+    </div>
+    <div class="confirmation-actions">
+        <form method="post" action="{{ url_for('delete_complaint', complaint_id=complaint_id) }}">
+            <input type="submit" value="Yes, Delete">
+            <a href="{{ url_for('admin_dashboard') }}">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

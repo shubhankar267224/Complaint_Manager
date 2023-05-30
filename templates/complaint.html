@@ -1,0 +1,135 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Complaint</title>
+</head>
+<body>
+    <h1>Submit a Complaint</h1>
+    <form action="{{ url_for('complaint') }}" method="POST">
+        <label for="customer_id">Customer ID:</label>
+        <input type="text" name="customer_id" required><br>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" required><br>
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" name="phone_number" required><br>
+        <label for="address">Address:</label>
+        <input type="text" name="address" required><br>
+        <label for="product_service">Product/Service:</label>
+        <input type="text" name="product_service" required><br>
+        <label for="complaint">Complaint:</label><br>
+        <textarea name="complaint" rows="5" required></textarea><br>
+        <input type="submit" value="Submit Complaint">
+    </form>
+    <a href="{{ url_for('home') }}">Go back to Home</a>
+</body>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complaint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Complaint</h1>
+        <form action="{{ url_for('complaint') }}" method="POST">
+            <div class="form-group">
+                <label for="customer_id">Customer ID:</label>
+                <input type="text" name="customer_id" id="customer_id" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" name="phone_number" id="phone_number" required>
+            </div>
+            <div class="form-group">
+                <label for="email_address">Email Address:</label>
+                <input type="text" name="email_address" id="email_address" required>
+            </div>
+            <div class="form-group">
+                <label for="product_service">Product/Service:</label>
+                <input type="text" name="product_service" id="product_service" required>
+            </div>
+            <div class="form-group">
+                <label for="complaint">Complaint:</label>
+                <textarea name="complaint" id="complaint" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn-submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <a href="{{ url_for('home') }}">Go back to Home</a>
+</body>
+</html>
